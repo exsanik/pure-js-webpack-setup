@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-    <%= require('html-loader!./partials/meta.html') %>
+    <%= require('ejs-webpack-loader!./partials/meta.html')() %>
 
     <title>Infmeteo</title>
 </head>
 
 <body>
-    <%= require('html-loader!./partials/header.html') %>
+    <%= require('ejs-webpack-loader!./partials/header.html')({ page: 'aboutUs' }) %>
 
     <main>
         <div>
@@ -16,7 +16,7 @@
         </div>
     </main>
 
-    <%= require('html-loader!./partials/footer.html') %>
+    <%= require('ejs-webpack-loader!./partials/footer.html')() %>
 </body>
 
 </html>
